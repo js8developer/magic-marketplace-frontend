@@ -210,6 +210,7 @@ function App() {
                     setFilteredNfts={setFilteredNfts}
                     ethPrice={ethPrice}
                     maticPrice={maticPrice}
+                    marketItems={marketItems}
                   /> 
             }
           />

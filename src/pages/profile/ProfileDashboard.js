@@ -2,8 +2,9 @@ import React from 'react'
 import NFTPortfolio from '../../components/NFTPortfolio'
 import Proceeds from '../../components/Proceeds'
 import TitleText from '../../components/TitleText'
+import MyListings from './MyListings'
 
-const ProfileDashboard = ({ chain, wallet, nfts, setNfts, filteredNfts, setFilteredNfts, ethPrice, maticPrice }) => {
+const ProfileDashboard = ({ chain, wallet, nfts, setNfts, filteredNfts, setFilteredNfts, ethPrice, maticPrice, marketItems }) => {
 
   return (
     <div>
@@ -13,6 +14,12 @@ const ProfileDashboard = ({ chain, wallet, nfts, setNfts, filteredNfts, setFilte
               wallet={wallet}
               ethPrice={ethPrice}
               maticPrice={maticPrice}
+          />
+          <MyListings 
+            wallet={wallet}
+            marketItems={marketItems}
+            ethPrice={ethPrice}
+            maticPrice={maticPrice}
           />
           <NFTPortfolio
               wallet={wallet}

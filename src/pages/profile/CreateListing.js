@@ -20,9 +20,6 @@ const CreateListing = ({ wallet, nfts }) => {
     // Blockchain Actions
     // // // // // // // //
     async function listNftForSale() {
-        if (Number(price) < 1.00){
-            console.log("Price is too low. Please enter a price greater than $1.00")
-        }
         console.log('listNftForSale')
         const provider = new ethers.providers.Web3Provider(window.ethereum)
         const signer = provider.getSigner()
@@ -40,11 +37,13 @@ const CreateListing = ({ wallet, nfts }) => {
         await approveTxn.wait()
 
         // 2. List the nft
-        const listingTxn = await magicMarketplace.listItemForSale(nftAddress, tokenId, price, {
+        const listPrice = ethers.utils.parseUnits(price)
+        const listingTxn = await magicMarketplace.listItemForSale(nftAddress, tokenId, listPrice, {
             gasLimit: 500000
         })
+        setListing(true)
         await listingTxn.wait()
-
+        setListing(false)
         console.log('NFT Successfully Listed on the Marketplace. ✅')
     }
 
@@ -84,13 +83,13 @@ const CreateListing = ({ wallet, nfts }) => {
                                     placeholder=" " 
                                     style={{}}
                                     />
-                                    <label for="price" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">Price (USD)</label>
+                                    <label for="price" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1">Price (ETH)</label>
                                 </div>
                                 { (listing === false) &&
                                     <button onClick={listNftForSale} className="h-12 inline-flex items-center py-2 px-4 text-sm font-medium text-center text-white bg-indigo-500 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200">List NFT for Sale</button>
                                 }
                                 { (listing === true) &&
-                                    <LoadingSpinnerButton text={'Updating Listing...'} />
+                                    <LoadingSpinnerButton text={'Creating Listing...'} />
                                 }
                             </div>
                         </div>
