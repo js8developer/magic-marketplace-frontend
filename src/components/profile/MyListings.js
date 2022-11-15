@@ -1,27 +1,24 @@
 import React from 'react'
-import { MarketItemNFTCard } from '../../components/cards/MarketItemNFTCard';
 import { Link } from 'react-router-dom';
+import { MarketItemNFTCard } from '../../components/cards/MarketItemNFTCard';
 
-const MyListings = ({ wallet, marketItems, ethPrice, maticPrice }) => {
+const MyListings = ({ wallet, marketItems }) => {
 
     const myListings = () => {
         let listings = []
         for (let i = 0; i < marketItems.length; i++){
             if (marketItems[i].seller.toLowerCase() === wallet.toLowerCase()){
                 listings.push(marketItems[i])
-            } else {
-                console.log('Not a match')
-            }
+            } 
         }
         return listings
     }
 
     return (
-        <div className='space-y-10'>
+        <div className='space-y-1'>
           <h1 className='font-bold text-3xl'>My Listings</h1>
-
           <div className='p-4'>
-              <div className="nftList">
+              <div className="flex flex-wrap gap-8">
                     { 
                         myListings().length > 0 &&
                         myListings().map((nft) => {
@@ -30,15 +27,12 @@ const MyListings = ({ wallet, marketItems, ethPrice, maticPrice }) => {
                                   <MarketItemNFTCard
                                     nft={nft}
                                     wallet={wallet}
-                                    ethPrice={ethPrice}
-                                    maticPrice={maticPrice}
                                   />
                               </Link>
                             );
                         })
                     }
               </div>
-    
           </div>
         </div>
       )

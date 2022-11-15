@@ -1,25 +1,20 @@
 import React from 'react'
-import NFTPortfolio from '../../components/NFTPortfolio'
-import Proceeds from '../../components/Proceeds'
-import TitleText from '../../components/TitleText'
-import MyListings from './MyListings'
 
-const ProfileDashboard = ({ chain, wallet, nfts, setNfts, filteredNfts, setFilteredNfts, ethPrice, maticPrice, marketItems }) => {
+import TitleText from '../../components/nav/TitleText'
+import WithdrawCard from '../../components/profile/WithdrawCard'
+import MyListings from '../../components/profile/MyListings'
+import NFTPortfolio from '../../components/profile/MyNFTs'
+
+const ProfileDashboard = ({ chain, wallet, nfts, setNfts, filteredNfts, setFilteredNfts, marketItems }) => {
 
   return (
     <div>
         <TitleText title='Profile Dashboard' />
         <div className='p-4 space-y-10'>
-          <Proceeds
-              wallet={wallet}
-              ethPrice={ethPrice}
-              maticPrice={maticPrice}
-          />
+          <WithdrawCard wallet={wallet} />
           <MyListings 
             wallet={wallet}
             marketItems={marketItems}
-            ethPrice={ethPrice}
-            maticPrice={maticPrice}
           />
           <NFTPortfolio
               wallet={wallet}

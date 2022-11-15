@@ -1,4 +1,3 @@
-
 const formatAddress = (address) => {
     if (address.toString() === "0x0000000000000000000000000000000000000000"){
         return address

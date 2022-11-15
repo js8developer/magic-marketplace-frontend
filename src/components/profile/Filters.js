@@ -1,10 +1,6 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
+import React, {useState, useEffect} from 'react'
 
-import { ProfileNFTCard } from './cards/ProfileNFTCard';
-import { Link } from 'react-router-dom';
-
-const NFTPortfolio = ({ chain, wallet, nfts, setNfts, filteredNfts, setFilteredNfts }) => {
+export default function Filters({ nfts, setFilteredNfts }) {
 
     const [nameFilter, setNameFilter] = useState("")
     const [idFilter, setIdFilter] = useState("")
@@ -52,47 +48,8 @@ const NFTPortfolio = ({ chain, wallet, nfts, setNfts, filteredNfts, setFilteredN
     }, [nameFilter, idFilter])
 
 
-    async function loadUsersNfts(){
-        const response = await axios.get("http://localhost:8081/user-nfts", {
-            params: {
-                address: wallet,
-                chain: chain
-            },
-        })
-
-        if (response.data){
-            processNFTsData(response.data.result)
-        }
-    }
-
-    function processNFTsData(nftsData){
-        
-        for (let i = 0; i < nftsData.length; i++){
-            let meta = JSON.parse(nftsData[i].metadata)
-            
-            if (meta && meta.image){
-                if (meta.image.includes(".")){
-                    nftsData[i].image = meta.image
-                } else {
-                    let edited = meta.image.replace('ipfs://', '')
-                    nftsData[i].image = "https://ipfs.moralis.io:2053/ipfs/" + edited
-                }
-            }
-        }
-        setNfts(nftsData)
-        setFilteredNfts(nftsData)
-    }
-    
-
-
   return (
-    <div className='space-y-8'>
-      <div className="flex flex-items space-x-4 align-middle">
-            <h1 className='font-bold text-3xl'>NFT Portfolio</h1>
-            <button className="text-black-500 bg-slate-100 p-3 rounded-md h-12" onClick={loadUsersNfts}>Refresh</button>
-      </div>
-
-      <div className="flex flex-items space-x-4 py-4">
+    <div className="flex flex-items space-x-4 py-4">
         <div>
             <label for="token_id" className="block mb-2 text-sm font-medium text-blue-500">Name</label>
             <input
@@ -105,7 +62,6 @@ const NFTPortfolio = ({ chain, wallet, nfts, setNfts, filteredNfts, setFilteredN
             placeholder="Sorcerer Mickey"
             />
         </div>
-        
         <div>
             <label for="token_id" className="block mb-2 text-sm font-medium text-blue-500">Token Id</label>
             <input
@@ -118,26 +74,6 @@ const NFTPortfolio = ({ chain, wallet, nfts, setNfts, filteredNfts, setFilteredN
             placeholder="1"
             />
         </div>
-        
       </div>
-
-
-        <div className="nftList">
-            { 
-                filteredNfts.length > 0 &&
-                filteredNfts.map((nft) => {
-                    return (
-                        <Link to={`/profile/${nft.token_address}/${nft.token_id}`}>
-                            <ProfileNFTCard 
-                                nft={nft}
-                            />
-                        </Link>
-                    );
-                })
-            }
-        </div>
-    </div>
   )
 }
-
-export default NFTPortfolio
