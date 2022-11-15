@@ -26,6 +26,28 @@ Deployed on the Goerli Testnet (ETH)
 
 ![Group 8](https://user-images.githubusercontent.com/36863375/201880560-70583b4c-ce2e-4358-b2e8-9c347d13de9d.png)
 
+Rarity Tables:
+
+- Inside Out: 
+  - Joy - 13% - Super Rare
+  - Disgust - 17% - Rare
+  - Sadness - 20% - Uncommon
+  - Fear - 25% - Common
+  - Anger - 25% - Common
+
+- Frozen: 
+  - Marshmallow - 8% - Super Rare
+  - Snowgies - 12% - Rare
+  - Elsa - 15% - Uncommon
+  - Anna - 15% - Uncommon
+  - Olaf - 25% - Common
+  - Sven - 25% - Common
+
+- Disney: 
+  - Mickey Mouse - 10% - Super Rare
+  - Minnie Mouse - 20% - Rare
+  - Goofy - 70% - Common
+  
 -- -- -- -- -- --
 
 ### Mint Tickets (NFTs) to Experiences based on the NFTs you hold
