@@ -9,6 +9,7 @@ Deployed on the Goerli Testnet (ETH)
 -- -- -- -- -- --
 
 Smart Contracts:
+- Viewable at https://goerli.etherscan.io/
 
 Marketplace: 
 - Magic Marketplace: 0xe660499C9eA555555338c0c02934A4543dcb6A85
