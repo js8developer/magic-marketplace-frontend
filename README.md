@@ -24,9 +24,9 @@ Deployed on the Goerli Testnet (ETH)
 
 ### Possible Mints
 
-![Group 6](https://user-images.githubusercontent.com/36863375/201879280-e0199d11-368e-4def-a994-31e2f1b9bc73.png)
-![Group 5](https://user-images.githubusercontent.com/36863375/201879355-7202946a-a688-4e6b-8b3f-68ea2da6c698.png)
-![Group 7](https://user-images.githubusercontent.com/36863375/201879376-d0fb5a3c-d7d2-422a-ae8b-f056eea5d1af.png)
+![Group 6](https://user-images.githubusercontent.com/36863375/201880219-33716e46-4a98-4556-9e7b-752f784cf864.png)
+![Group 5](https://user-images.githubusercontent.com/36863375/201880292-fbac1810-47f4-4e68-b940-f41df5ae3157.png)
+![Group 7](https://user-images.githubusercontent.com/36863375/201880263-eea52238-a2be-40e1-959d-073a7376f4dd.png)
 
 -- -- -- -- -- --
 
