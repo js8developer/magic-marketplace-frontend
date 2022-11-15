@@ -26,11 +26,6 @@ Deployed on the Goerli Testnet (ETH)
 
 ![Group 8](https://user-images.githubusercontent.com/36863375/201880560-70583b4c-ce2e-4358-b2e8-9c347d13de9d.png)
 
-
-![Group 6](https://user-images.githubusercontent.com/36863375/201880219-33716e46-4a98-4556-9e7b-752f784cf864.png)
-![Group 5](https://user-images.githubusercontent.com/36863375/201880292-fbac1810-47f4-4e68-b940-f41df5ae3157.png)
-![Group 7](https://user-images.githubusercontent.com/36863375/201880263-eea52238-a2be-40e1-959d-073a7376f4dd.png)
-
 -- -- -- -- -- --
 
 ### Mint Tickets (NFTs) to Experiences based on the NFTs you hold
