@@ -26,7 +26,7 @@ Deployed on the Goerli Testnet (ETH)
 
 ![Group 8](https://user-images.githubusercontent.com/36863375/201880560-70583b4c-ce2e-4358-b2e8-9c347d13de9d.png)
 
-Rarity Tables:
+### Rarity Tables:
 
 - Inside Out: 
   - Joy - 13% - Super Rare
