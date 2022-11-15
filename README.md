@@ -22,4 +22,3 @@ Frontend
 - JavaScript
 - Ethers
 - Axios
-- Alchemy SDK
