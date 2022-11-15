@@ -23,10 +23,5 @@ Frontend
 - Ethers
 - Axios
 
-![MainPagesGroup](https://user-images.githubusercontent.com/36863375/201814288-4edb3765-5126-4c83-bf8d-6948c8a8776f.png)
 ![MainPagesGroup2x](https://user-images.githubusercontent.com/36863375/201814435-365753fc-0a47-47cb-b01c-28a8bc34d481.png)
 
-<img width="1191" alt="marketplace" src="https://user-images.githubusercontent.com/36863375/201813034-09cb58be-a585-4d18-af1e-ecee8d1e85f2.png">
-<img width="1377" alt="collections" src="https://user-images.githubusercontent.com/36863375/201813177-cc12bef6-b2e0-4328-b362-1b15e2e603d4.png">
-<img width="1379" alt="experiences" src="https://user-images.githubusercontent.com/36863375/201813186-350a55e0-cb94-4fcb-86b4-6809284082d5.png">
-<img width="1200" alt="profile-top" src="https://user-images.githubusercontent.com/36863375/201813256-9d4bfc87-0ec4-4fa2-bdbd-8a86ee26fd7d.png">
