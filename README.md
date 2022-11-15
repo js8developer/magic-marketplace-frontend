@@ -37,6 +37,7 @@ View your NFTs & List them on the Marketplace
 -- -- -- -- -- --
 
 Smart Contracts:
+- Deployed on the Goerli Testnet (ETH)
 - Viewable at https://goerli.etherscan.io/
 
 Marketplace: 
