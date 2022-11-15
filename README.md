@@ -4,8 +4,8 @@ A fun Disney-inspired NFT Marketplace where users can buy and sell their Disney 
 
 Deployed on the Goerli Testnet (ETH)
 
-Frontend: Current Repo
-Backend: https://github.com/js8developer/magic-marketplace-backend
+- Frontend: Current Repo
+- Backend: https://github.com/js8developer/magic-marketplace-backend
 
 ![MainPages@2x](https://user-images.githubusercontent.com/36863375/201825895-db0aa393-608a-455c-93b4-abcadd47e661.png)
 
