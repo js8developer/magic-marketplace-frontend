@@ -4,6 +4,10 @@ A Disney-inspired NFT Marketplace where users can buy and sell their Disney NFTs
 
 Deployed on the Goerli Testnet (ETH)
 
+
+![MainPagesGroup2x](https://user-images.githubusercontent.com/36863375/201814435-365753fc-0a47-47cb-b01c-28a8bc34d481.png)
+
+
 Backend
 - Solidity
 - JavaScript
@@ -22,6 +26,3 @@ Frontend
 - JavaScript
 - Ethers
 - Axios
-
-![MainPagesGroup2x](https://user-images.githubusercontent.com/36863375/201814435-365753fc-0a47-47cb-b01c-28a8bc34d481.png)
-
